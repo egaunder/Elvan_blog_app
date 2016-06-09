@@ -38,7 +38,19 @@ a:hover {
   background-color: $dark_grey;
 }
 
+/**********  Articles  ********************/
 
+.article-action {
+  border-top: 1px solid $orange_color;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.description {
+  margin-top: 0;
+  border-bottom: 1px solid $orange_color;
+  padding-bottom: 20px;
+}
 
 /**********  Footer  ********************/
 
