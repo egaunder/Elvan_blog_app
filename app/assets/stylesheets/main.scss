@@ -15,9 +15,17 @@ a:hover {
   color: black;
 }
 
+.navbar {
+  border-radius: 0;
+}
+
 /**********  Resuseable  ********************/
 .center {
   text-align: center;
+}
+
+.div-center {
+  margin: 0 auto;
 }
 
 .btn-primary {
