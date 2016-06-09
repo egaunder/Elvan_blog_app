@@ -1,3 +1,88 @@
-.float-left {
-  float: left;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$orange_color: #e67e22;
+$dark_grey: #3a3333;
+
+/**********  Layout  ********************/
+
+a {
+  color: black;
 }
+
+a:hover {
+  color: black;
+}
+
+/**********  Resuseable  ********************/
+.center {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: $dark_grey;
+}
+
+
+
+/**********  Footer  ********************/
+
+footer {
+  border-top: 1px solid #eaeaea;
+  margin-top: 45px;
+  padding-top: 10px;
+  color: $orange_color;
+}
+
+.footer {
+  ul {
+    display: inline;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+/**********  Home Page  ********************/
+
+.jumbotron {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), asset-url('blog_post_bg.jpg');
+  background-size: cover;
+  height: 450px;
+
+  h1 {
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
