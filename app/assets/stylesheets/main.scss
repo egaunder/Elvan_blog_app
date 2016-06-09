@@ -38,6 +38,10 @@ a:hover {
   background-color: $dark_grey;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 /**********  Articles  ********************/
 
 .article-action {
@@ -50,6 +54,20 @@ a:hover {
   margin-top: 0;
   border-bottom: 1px solid $orange_color;
   padding-bottom: 20px;
+}
+
+/**********  View all articles Page  ********************/
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 15px;
+}
+
+.article-body {
+  border-top: 1px solid $orange_color;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 /**********  Footer  ********************/
@@ -78,7 +96,7 @@ footer {
   height: 450px;
 
   h1 {
-    color: #fff;
+    color: $orange_color;
     letter-spacing: 1px;
   }
 
