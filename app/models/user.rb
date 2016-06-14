@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base 
+  
   has_many :articles
 
   # will lowercase the email before saving
@@ -9,8 +10,11 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   
   # pass in valid regex to check if email is valid
-  VALID_EMAIL_REGEX= /\A[w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
             uniqueness: { case_sensitive: false },
+            length: { maximum: 105 },
             format: { with: VALID_EMAIL_REGEX }
+
+  has_secure_password
 end
