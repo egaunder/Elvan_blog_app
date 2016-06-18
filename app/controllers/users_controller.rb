@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :set_user, only: [:edit, :update, :show]
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
   end
@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to the Tech Blog #{@user.username}"
       redirect_to articles_path
@@ -19,8 +18,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
-
+    
   end
 
   def update
@@ -34,13 +32,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
 
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
