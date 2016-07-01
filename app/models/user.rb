@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base 
   
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
   # will lowercase the email before saving
   before_save { self.email = email.downcase }
