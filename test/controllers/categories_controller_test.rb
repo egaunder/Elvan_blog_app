@@ -20,4 +20,5 @@ class CategoriesControllerTest < ActionController::TestCase
     get(:show, {'id' => @category.id})
     assert_response :success
   end
+
 end
