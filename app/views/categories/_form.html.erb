@@ -1,0 +1,15 @@
+
+<%= render 'shared/error', obj: @category %>
+
+<%= form_for @category do |f| %>
+
+ <fieldset class="form-group col-xs-10">
+   <%= f.label :category %> 
+   <%= f.text_field :name, class: "form-control", placeholder: "Enter category name", autofocus: true %>
+ </fieldset>
+
+ <fieldset class="form-group col-xs-10">
+  <%= f.submit class: "btn btn-primary" %> <br><br>     
+ </fieldset>
+
+<% end %>
