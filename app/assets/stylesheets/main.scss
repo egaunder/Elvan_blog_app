@@ -114,11 +114,20 @@ footer {
 
 
 
+/**********  Categories  ********************/
 
+.badge {
+  background-color: $orange_color;
+  text-transform: uppercase;
+  margin-right: 5px;
+  a {
+    text-decoration: none;
+  }
+}
 
-
-
-
+.input_checkbox input {
+  width: auto !important;
+}
 
 
 

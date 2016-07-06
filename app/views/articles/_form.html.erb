@@ -14,6 +14,12 @@
      </fieldset>
 
      <fieldset class="form-group col-xs-10">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+          <%= cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+        <% end %>  
+     </fieldset>
+
+     <fieldset class="form-group col-xs-10">
       <%= f.submit class: "btn btn-primary" %> <br><br>
       <%= link_to "Back to article listing", articles_path %>      
      </fieldset>
